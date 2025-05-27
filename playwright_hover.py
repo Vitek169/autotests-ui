@@ -1,5 +1,6 @@
 from playwright.sync_api import sync_playwright
 
+from playwright_registration import registration_button
 
 with sync_playwright() as playwright:
     # Открываем браузер и создаем страницу
@@ -11,4 +12,4 @@ with sync_playwright() as playwright:
     # Находим ссылку Registration
     registration_link = page.get_by_test_id('login-page-registration-link')
     registration_link.hover()
-    page.wait_for_timeout(5000)
+    page.wait_for_timeout(3000)

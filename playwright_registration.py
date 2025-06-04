@@ -20,6 +20,7 @@ with sync_playwright() as playwright:
 
     dashboard_headline = page.get_by_test_id('dashboard-toolbar-title-text')
 
+    # Проверяем наличие текста
     expect(dashboard_headline).to_have_text('Dashboard')
     expect(dashboard_headline).to_be_visible()
     page.wait_for_timeout(5000)

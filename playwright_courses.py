@@ -1,5 +1,5 @@
 from playwright.sync_api import sync_playwright, expect
-from pytest_playwright.pytest_playwright import new_context, browser
+
 
 # Открываем страницу при помощи Playwright и менеджера контекста
 with sync_playwright() as playwright:

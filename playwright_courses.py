@@ -37,7 +37,7 @@ with sync_playwright() as playwright:
     courses_text = page.get_by_test_id('courses-list-toolbar-title-text')
     expect(courses_text).to_have_text('Courses')
 
-    result_text = page.get_by_test_id('There is no results')
+    result_text = page.get_by_test_id('courses-list-empty-view-title-text')
     expect(result_text).to_have_text('There is no results')
 
     result_from_text = page.get_by_test_id('courses-list-empty-view-description-text')

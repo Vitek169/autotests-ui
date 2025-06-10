@@ -46,3 +46,5 @@ def test_empty_courses_list():
         # Проверка на видимость иконки папки
         folder_image = page.get_by_test_id('courses-list-empty-view-icon')
         expect(folder_image).to_be_visible()
+
+

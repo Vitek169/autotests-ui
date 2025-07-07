@@ -1,5 +1,10 @@
+import pytest
 from playwright.sync_api import sync_playwright, expect
 
+@pytest.mark.ui # Добавляем маркировку ui
+@pytest.mark.regression # Добавляем маркировку regression
+@pytest.mark.smoke # Добавляем маркировку smoke
+@pytest.mark.registration # Добавляем маркировку registration
 def test_successful_registration():
     # Открываем страницу при помощи Playwright и менеджера контекста
     with sync_playwright() as playwright:

@@ -1,5 +1,10 @@
+import pytest
 from playwright.sync_api import sync_playwright, expect
 
+@pytest.mark.ui # Добавляем маркировку ui
+@pytest.mark.smoke # Добавляем маркировку smoke
+@pytest.mark.registration # Добавляем маркировку regression
+@pytest.mark.authorization ## Добавляем маркировку authorization
 def test_wrong_email_or_password_authorization():
     with sync_playwright() as playwright:
         browser = playwright.chromium.launch(headless=False)

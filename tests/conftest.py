@@ -10,7 +10,7 @@ def chromium_page() -> Page: # Аннотируем возвращаемое ф�
     # Ниже идет инициализация и открытие новой страницы
     with sync_playwright() as playwright:
         # Запуск браузера
-    browser = playwright.chromium.launch(headless=False)
+        browser = playwright.chromium.launch(headless=False)
 
     # Передаем страницу для использования в тесте, после теста она автоматически закроется
-    yield browser.new_page()
+        yield browser.new_page()
